@@ -43,13 +43,52 @@ for(i = 0; i < list.length; i++){
     p *= list[i];
 }
 
-console.log('sum=', sum);
-console.log('mul=', p);
+// console.log('sum=', sum);
+// console.log('mul=', p);
 
 // ---------------------------------
 
 arr = new Array(17); // через конструктор
-console.log(arr);
+// console.log(arr);
 
 
-z = Math.floor(Math.random()*66 - 20)
+z = Math.floor(Math.random()*66 - 20);
+
+// ---------------------------------
+
+list = [];
+list.length = 20;
+
+for(i = 0; i < list.length; i++){
+    list[i] = Math.floor(Math.random()*10 + 1);
+
+    isPrime = true;
+    for(j = 2; j <= list[i] - 1; j++){
+        if(list[i] % j == 0) {
+            isPrime = false;
+            break;
+        }
+    }
+
+    if(isPrime){
+        // console.log(list[i])
+        // list[i] = undefined;
+        
+        for(k = i; k < list.length - 1; k++){
+            list[k] = list[k + 1];
+        }
+        i--;
+        list.length--;
+    }
+}
+
+console.log(list);
+
+// variant 2
+// newList = [];
+// for(i = 0; i < list.length; i++){
+//     if(list[i] != undefined) {
+//         newList[newList.length] = list[i];
+//     }
+// }
+// console.log(newList)
