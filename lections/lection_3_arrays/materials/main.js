@@ -50,3 +50,6 @@ console.log('mul=', p);
 
 arr = new Array(17); // через конструктор
 console.log(arr);
+
+
+z = Math.floor(Math.random()*66 - 20)
