@@ -4,8 +4,7 @@
 * https://learn.javascript.ru/object
 * https://learn.javascript.ru/object-for-in
 * https://learn.javascript.ru/object-reference
-
-
+* https://drive.google.com/open?id=0B121aJ52ADuLNzhLM09ZeXR2aUk (страницы 37-39, 45-47, 78-85)
 
 # Практика
 
