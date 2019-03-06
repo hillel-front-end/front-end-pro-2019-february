@@ -1,76 +1,123 @@
-console.log('Lection_8');
+console.log('lection 8 additional');
 
 
-var data = {
-    list: [],
-    fillArr: function(length){
-        // this.list = [];
-        // this.list.length = length;
-        this.list = new Array(length);
-
-        for(var i = 0; i < this.list.length; i++ ){
-            this.list[i] = Math.floor(Math.random()*20)
-        }
-    },
-    render: function(){
-        document.write(this.list + '<hr />');
-    },
-    setMarker: function(position, marker, id){
-        if(position < 0) return;
-        if(!this._storage) {
-            // this._storage = [];
-            this._storage = {};
-        }
-
-        // this._storage.push({
-        //     position: position,
-        //     marker: marker,
-        //     oldValue: this.list[position],
-        //     id: id // !important
-        // });
-
-        this._storage[id] = {
-            position: position,
-            marker: marker,
-            oldValue: this.list[position],
-        };
-
-        this.list[position] = marker;
-    },
-    moveMarker: function(id, newPosition){
-        // var storageRecord;
-        // for(var i = 0; i < this._storage.length; i++){
-        //     storageRecord = this._storage[i];
-
-        //     if(storageRecord.id === id) {
-        //         // this._storage[i].position // index of old value
-        //         this.list[storageRecord.position] = storageRecord.oldValue;
-        //         storageRecord.oldValue = this.list[newPosition];
-        //         storageRecord.position = newPosition;
-        //         this.list[newPosition] = storageRecord.marker;
-
-        //         return;
-        //     }
-        // }
-        storageRecord = this._storage[id];
-        if(!storageRecord) return'
-
-        this.list[storageRecord.position] = storageRecord.oldValue;
-        storageRecord.oldValue = this.list[newPosition];
-        storageRecord.position = newPosition;
-        this.list[newPosition] = storageRecord.marker;
+// двумерные массивы
 
 
+
+var list = [];
+
+var n = 10, m = 5;
+
+
+var arr = new Array(n);
+
+for(var i = 0; i < arr.length; i++){
+    arr[i] = new Array(m);
+    for(var j = 0; j < arr[i].length; j++){
+        arr[i][j] = Math.floor(Math.random()*10);
+
+        document.write(arr[i][j] + ' ')
     }
-};
+
+    document.write('<br />')
+}
+
+console.log(arr);
+
+// ------------------------------
+var max = arr[0][0];
+
+for(var i = 0; i < arr.length; i++){
+    for(var j = 0; j < arr[i].length; j++){
+        if (arr[i][j] > max) {
+            max = arr[i][j];
+        }
+    }
+}
+console.log(max)
 
 
-data.fillArr(15);
-data.render();
-data.setMarker(6, '*', 'zvezda');
-data.setMarker(3, '/', 'delenie');
-data.render();
+// ------------------------------
 
-data.moveMarker('zvezda', 10)
+document.write('<hr /><h1>List</h1>')
 
-data.render();
+var n = 9, m = 9;
+
+
+var list = new Array(n);
+k = 3;
+
+for(var i = 0; i < list.length; i++){
+    list[i] = new Array(m);
+    for(var j = 0; j < list[i].length; j++){
+        list[i][j] = 0;
+
+        // вертикальная линия
+        // if(j == k) {
+        //     list[i][j] = '*';
+        // }
+
+        // горизонтальная линия
+        // if(i == k) {
+        //     list[i][j] = '*';
+        // }
+
+        // главная диагональ
+        // if(i == j) {
+        //     list[i][j] = '*';
+        // }
+
+        // побочная диагональ
+        // if(i + j + 1 == n) {
+        //     list[i][j] = '*';
+        // }
+
+        // вертикальные зоны
+        // if(j < k) {
+        //     list[i][j] = '*';
+        // }
+
+        // горизонтальные зоны
+        //  if(i > k) {
+        //     list[i][j] = '*';
+        //  }
+
+        // ниже/выше чем главная диагональ
+        // if(i > j) {
+        //     list[i][j] = '*';
+        // }
+
+        // ниже/выше чем побочная диагональ
+        // if(i + j + 1 < n) {
+        //     list[i][j] = '*';
+        // }
+
+
+        //--------------------------------
+
+        // сложенные условия
+        center = n / 2 - 1;
+        // if(i >= center && j >= center){
+        //     list[i][j] = '*';
+        // }
+
+        if(i + j + 1 >= n && i <= center){
+            list[i][j] = '*';
+        }
+
+        document.write(i + '' + j + ' ' )
+    }
+
+    document.write('<br />')
+}
+
+
+document.write('<hr />')
+
+for(var i = 0; i < list.length; i++){
+    for(var j = 0; j < list[i].length; j++){
+        document.write(list[i][j] + ' ' );
+    }
+    document.write('<br />');
+}
