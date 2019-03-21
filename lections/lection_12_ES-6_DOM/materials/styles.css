@@ -1,0 +1,26 @@
+.block {
+    width: 200px;
+    height: 150px;
+    border: 2px solid black;
+    transition: .2s;
+    left: 0;
+    top: 0;
+    position: relative;
+}
+
+.block:hover {
+    background-color: bisque;
+}
+
+#elem {
+    border-radius: 20px;
+}
+
+html > .block {
+
+}
+
+.block.animate {
+    left: 100px;
+    top: 20px;
+}

@@ -48,27 +48,43 @@ console.log('Lection 11');
 // наследование
 
 
-function C1(){
+// function C1(){
 
-}
+// }
 
-C1.prototype.m1 = function(){}
+// C1.prototype.m1 = function(){}
 
-// -----
+// // -----
 
-function C2(){
-    this.m3 = function(){}
-}
+// function C2(){
+//     this.m3 = function(){}
+// }
 
 // C2.prototype = new C1(); // наследование
 // C2.prototype.m2 = function(){};
 // C2.prototype = Object.assign(new C1(), C2.prototype);
 
 // ------------------
+// C2.prototype = Object.create(C1.prototype);
+// C2.prototype.m2 = function(){};
+
+
+// var p = new C2();
+
+// console.log(p);
+
+
+// -------------------------------------------
+
+
+function C1(){}
+
+function C2(){}
 C2.prototype = Object.create(C1.prototype);
-C2.prototype.m2 = function(){};
+
+function C3(){}
+C3.prototype = Object.create(C2.prototype);
 
 
-var p = new C2();
-
-console.log(p);
+var p = new C3();
+console.log(p)
