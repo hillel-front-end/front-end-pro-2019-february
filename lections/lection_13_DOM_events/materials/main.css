@@ -1,0 +1,24 @@
+.list li {
+    font-size: 14px;
+    transition: 1s;
+}
+
+.list li.animate {
+    font-size: 18px;
+}
+
+.list li.animate:last-child {
+    display: none;
+}
+
+.block {
+    width: 150px;
+    height: 180px;
+    border: 4px solid black;
+    border-radius: 10px;
+    position: fixed;
+
+    left: 120px;
+    top: 200px;
+    transition: .01s;
+}
