@@ -144,6 +144,6 @@ function getList() {
 window.onload = function(){
 
 
-    document.body.innerHTML = getList()
+    document.body.innerHTML += getList()
 
 }
