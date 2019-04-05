@@ -1,5 +1,7 @@
 # Изучить материал
-
+ * https://javascriptplayground.com/ecmascript-5-array-methods/
+ * https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array
+ * https://learn.javascript.ru/array-iteration
 
 # Практика
 
