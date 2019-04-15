@@ -1,0 +1,9 @@
+{
+    "value": -10,
+    "name": "Hello",
+    "flag": false,
+    "address": {
+        "street": "Mechnbikova",
+        "friends": [1, 2, 3, 4]
+    }
+}
