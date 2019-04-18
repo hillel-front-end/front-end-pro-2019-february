@@ -59,7 +59,7 @@ console.log('Lection_6');
             
 //             console.log(a, b, k, c, z, t);
 //             // debugger;
-//             // console.dir(arguments.callee)
+//            // console.dir(arguments.callee)
 //         }
 //     }
 // }
