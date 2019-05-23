@@ -19,17 +19,18 @@ function filereader(fsRef, path) {
 function getBuildings(req, res) {
 	let path = pathConcat('api' + req.route.path + '/' + req.method.toLowerCase() + '.json'),
 		servicePromise = filereader(fs, path);
-
-	console.log(path);
 	
+	console.log(path);
 	servicePromise
 		.then((response) => {
-			// let newList = response.results.filter(item => item.price);
-
-			// response.results = newList;
-
+			if(req.query.id) {
+				return response && 
+				response.results && 
+				response.results.filter(building => building.id === req.query.id);
+			}
+			
 			return response;
-		})
+		})	
 		.then((response) => {
 			res.json(response);
 		});
