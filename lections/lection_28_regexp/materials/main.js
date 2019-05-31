@@ -36,7 +36,7 @@ str = `Hello world! 199 97756 8world 2019 world helloWo 2013`;
  - Альтернация
 */
 
-var str = "A1988 год Как дела? Что делать?  Когда нет ничего в 18 лет.too"
+var str = "1988 год Как дела? Что делать?  Когда нет ничего в 18 лет.too"
 // var result = str.match(/\b\D{2}\b/gi);
 // var result = str.match(/\d{1,}\.{0,1}\d{0,}/gi);
 // var result = str.match(/\d+(\.\d+)?/gi);
